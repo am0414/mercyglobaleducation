@@ -275,6 +275,7 @@
   .extra__in{border-left:2px solid var(--navy-wash);padding:2px 0 2px 22px;margin-bottom:20px}
   .extra__hint{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:18px}
   .privacy{margin-top:16px;font-size:11.5px;color:var(--muted)}
+  .form-error{margin-top:14px;font-size:12.5px;color:#B04434;line-height:1.7}
   .sent{display:none;border-top:2px solid var(--navy);padding-top:26px}
   .sent h3{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);margin-bottom:10px;line-height:1.6}
   .sent p{font-size:13.5px}
@@ -619,13 +620,12 @@
           </p>
           <div class="ct__meta">
             Mercy Global Education LLC<br>
-            <a href="mailto:hq.saglobal@gmail.com">hq.saglobal@gmail.com</a><br>
+            <a href="mailto:info@mercyglobaleducation.com">info@mercyglobaleducation.com</a><br>
             2営業日以内にご返信します。
           </div>
         </div>
 
         <div class="ct__form" id="contactCol">
-          <!-- TODO: 送信先を差し替え（Formspree / /api/contact / Google Form） -->
           <form id="inquiry" novalidate>
             <div class="field">
               <label for="reason">ご用件</label>
@@ -686,12 +686,16 @@
             </div>
 
             <button type="submit" class="btn btn--solid">送信する<i></i></button>
+            <p class="form-error" id="formError" role="alert" hidden>
+              送信に失敗しました。時間をおいて再度お試しいただくか、
+              info@mercyglobaleducation.com までご連絡ください。
+            </p>
             <p class="privacy">いただいた情報は、このお問い合わせへの返信のみに使用します。</p>
           </form>
 
           <div class="sent" id="sent" role="status">
             <h3>送信しました。<br>ありがとうございます。</h3>
-            <p>ご記入のメールアドレス宛に、2営業日以内にご返信します。お急ぎの場合は hq.saglobal@gmail.com まで直接ご連絡ください。</p>
+            <p>ご記入のメールアドレス宛に、2営業日以内にご返信します。お急ぎの場合は info@mercyglobaleducation.com まで直接ご連絡ください。</p>
           </div>
         </div>
       </div>
@@ -723,7 +727,7 @@
       <div>
         <h4>Contact</h4>
         <ul class="ftr__list">
-          <li><a href="mailto:hq.saglobal@gmail.com">hq.saglobal@gmail.com</a></li>
+          <li><a href="mailto:info@mercyglobaleducation.com">info@mercyglobaleducation.com</a></li>
           <li><a href="#contact">お問い合わせフォーム</a></li>
           <li><a href="#contact">講師応募</a></li>
         </ul>
@@ -758,8 +762,36 @@
     if(!reason.value||!document.getElementById("name").value||!document.getElementById("email").value){
       alert("ご用件・お名前・メールアドレスをご記入ください。");return;
     }
-    // TODO: 実送信処理をここに
-    document.getElementById("contactCol").classList.add("is-sent");
+    var form=this;
+    var btn=form.querySelector('button[type="submit"]');
+    var err=document.getElementById("formError");
+    var original=btn.innerHTML;
+    err.hidden=true;
+    btn.disabled=true;
+    btn.textContent="送信中...";
+    var val=function(id){var el=document.getElementById(id);return el?el.value:"";};
+    var fd=new FormData();
+    fd.append("reason",reason.value);
+    fd.append("name",val("name"));
+    fd.append("email",val("email"));
+    fd.append("country",val("country"));
+    fd.append("message",val("message"));
+    if(reason.value==="teach"){
+      fd.append("service",val("service"));
+      fd.append("subjects",val("subjects"));
+      fd.append("availability",val("availability"));
+      fd.append("experience",val("experience"));
+    }
+    fd.append("_subject","お問い合わせ（日本語サイト）: "+reason.value);
+    var fail=function(){ btn.disabled=false; btn.innerHTML=original; err.hidden=false; };
+    fetch("https://formspree.io/f/maewrldk",{
+      method:"POST",
+      headers:{"Accept":"application/json"},
+      body:fd
+    }).then(function(res){
+      if(res.ok){ document.getElementById("contactCol").classList.add("is-sent"); }
+      else{ fail(); }
+    }).catch(fail);
   });
 
   // staggered reveal
