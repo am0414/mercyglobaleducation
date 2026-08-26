@@ -309,6 +309,10 @@
   .ftr__list{list-style:none;display:flex;flex-direction:column;gap:11px;font-size:13px}
   .ftr__list a{transition:color .22s}
   .ftr__list a:hover{color:#fff}
+  .ftr__row{display:flex;align-items:center;gap:10px}
+  .ftr__ig{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:5px;border:1px solid rgba(255,255,255,.22);color:#8FA6C4;transition:.22s;flex:0 0 auto}
+  .ftr__ig:hover{color:#fff;border-color:rgba(255,255,255,.55)}
+  .ftr__ig svg{width:13px;height:13px;display:block}
   .ftr__base{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:26px;border-top:1px solid rgba(255,255,255,.13);font-size:11.5px;color:#6B84A6;letter-spacing:.03em}
   .ftr__base a:hover{color:#fff}
   @media(max-width:760px){.ftr__cols{grid-template-columns:1fr;gap:34px}}
@@ -741,8 +745,14 @@
       <div>
         <h4>Services</h4>
         <ul class="ftr__list">
-          <li><a href="https://success-j-academy.com">Success Academy</a></li>
-          <li><a href="https://www.brightbelearning.com">BrightBe Learning</a></li>
+          <li class="ftr__row">
+            <a href="https://success-j-academy.com">Success Academy</a>
+            <a href="https://www.instagram.com/successacademy_7/" class="ftr__ig" aria-label="Success Academy on Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          </li>
+          <li class="ftr__row">
+            <a href="https://www.brightbelearning.com">BrightBe Learning</a>
+            <a href="https://www.instagram.com/brightbelearning/" class="ftr__ig" aria-label="BrightBe Learning on Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          </li>
           <li><a href="https://www.brightbeone.com">BrightBe One</a></li>
         </ul>
       </div>
