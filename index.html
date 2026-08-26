@@ -71,7 +71,6 @@
   .btn i{display:block;width:12px;height:1px;background:currentColor;position:relative;transition:transform .28s}
   .btn i::after{content:"";position:absolute;right:0;top:-2.5px;width:5px;height:5px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
   .btn:hover i{transform:translateX(3px)}
-  @media(max-width:880px){.nav{display:none}.hdr .btn{margin-left:0}}
 
   .lang{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.1em;margin-left:6px;flex:0 0 auto}
   .lang a{color:var(--muted);transition:color .22s;padding:4px 2px}
@@ -79,10 +78,18 @@
   .lang a.on{color:var(--navy);border-bottom:1px solid var(--navy)}
   .lang span{color:var(--line);font-size:10px}
   @media(max-width:880px){
+    .nav{display:none}
+    .hdr .btn{display:none}
+    .hdr__in{gap:12px;height:66px}
     .lang{margin-left:auto;font-size:10.5px;gap:6px}
+    .mark b{font-size:15px}
+    .mark span{font-size:8px;letter-spacing:.2em}
+    .hero{padding-top:clamp(112px,26vw,150px)}
   }
   @media(max-width:420px){
     .lang{font-size:10px;gap:5px;letter-spacing:.06em}
+    .mark b{font-size:13.5px}
+    .mark span{font-size:7.5px}
   }
 
   /* ── hero ── */
