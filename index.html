@@ -170,6 +170,11 @@
   .svc__link span{position:relative;padding-bottom:2px}
   .svc__link span::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
   .svc__row:hover .svc__link span::after{transform:scaleX(1)}
+  .svc__links{display:flex;align-items:center;gap:14px;margin-top:22px}
+  .svc__links .svc__link{margin-top:0}
+  .svc__ig{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;border:1px solid var(--line);color:var(--muted);transition:.22s;flex:0 0 auto}
+  .svc__ig:hover{color:var(--navy);border-color:var(--navy)}
+  .svc__ig svg{width:14px;height:14px;display:block}
   .svc__spec{list-style:none;border-top:1px solid var(--line)}
   .svc__spec li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line-soft);font-size:12px;color:var(--muted)}
   .svc__spec b{font-weight:500;color:var(--ink);text-align:right;font-size:12.5px}
@@ -414,7 +419,10 @@
           <div>
             <h3 class="svc__name">Success Academy</h3>
             <p class="svc__desc">An online Japanese supplementary school for children with Japanese roots growing up abroad.</p>
-            <a href="https://success-j-academy.com" class="svc__link"><span>success-j-academy.com</span><i style="display:block;width:11px;height:1px;background:currentColor;position:relative"></i></a>
+            <div class="svc__links">
+              <a href="https://success-j-academy.com" class="svc__link"><span>success-j-academy.com</span><i style="display:block;width:11px;height:1px;background:currentColor;position:relative"></i></a>
+              <a href="https://www.instagram.com/successacademy_7/" class="svc__ig" aria-label="Success Academy on Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            </div>
           </div>
           <ul class="svc__spec">
             <li>Ages<b>Preschool – Grade 9</b></li>
@@ -431,7 +439,10 @@
           <div>
             <h3 class="svc__name">BrightBe Learning</h3>
             <p class="svc__desc">Math and ELA for families living in the United States.</p>
-            <a href="https://www.brightbelearning.com" class="svc__link"><span>brightbelearning.com</span><i style="display:block;width:11px;height:1px;background:currentColor;position:relative"></i></a>
+            <div class="svc__links">
+              <a href="https://www.brightbelearning.com" class="svc__link"><span>brightbelearning.com</span><i style="display:block;width:11px;height:1px;background:currentColor;position:relative"></i></a>
+              <a href="https://www.instagram.com/brightbelearning/" class="svc__ig" aria-label="BrightBe Learning on Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            </div>
           </div>
           <ul class="svc__spec">
             <li>Ages<b>Pre-K – Grade 6</b></li>
