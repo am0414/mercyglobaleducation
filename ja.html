@@ -332,10 +332,10 @@
     *{transition:none!important}
   }
 
-  /* ── classroom (editorial media strip) ── */
+  /* ── classroom (editorial media strip, directly under hero) ── */
+  .cls-sec{padding:clamp(28px,4vw,48px) 0 0}
   .cls{
     display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px);
-    border-top:1px solid var(--line);padding-top:clamp(26px,3.4vw,44px);
   }
   .cls__item{
     position:relative;margin:0;aspect-ratio:9/16;overflow:hidden;
@@ -400,6 +400,20 @@
           </div>
           <p class="ledger__foot">Tokyo, Japan / St. Petersburg, Florida</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSROOM -->
+  <section class="cls-sec" id="classroom">
+    <div class="wrap">
+      <div class="cls rv">
+        <div class="cls__item cls__item--video">
+          <iframe src="https://customer-o366cgm5nw1c8kcu.cloudflarestream.com/3f54859e91be8d09c694abb93aadb1fe/iframe?autoplay=true&amp;loop=true&amp;muted=true&amp;controls=false" loading="lazy" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="授業の動画"></iframe>
+        </div>
+        <figure class="cls__item"><img src="images/classroom-01.jpg" alt="プリントで学習する男の子" loading="lazy"></figure>
+        <figure class="cls__item"><img src="images/classroom-02.jpg" alt="タブレットで学ぶ笑顔の女の子" loading="lazy"></figure>
+        <figure class="cls__item"><img src="images/classroom-03.jpg" alt="鉛筆で書く男の子" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -530,33 +544,12 @@
     </div>
   </section>
 
-  <!-- CLASSROOM -->
-  <section class="sec" id="classroom">
-    <div class="wrap">
-      <div class="head rv">
-        <div class="head__meta">
-          <span class="num">03</span>
-          <span class="lbl">授業</span>
-        </div>
-        <h2 class="head__title">34カ国から</h2>
-      </div>
-      <div class="cls rv">
-        <div class="cls__item cls__item--video">
-          <iframe src="https://customer-o366cgm5nw1c8kcu.cloudflarestream.com/3f54859e91be8d09c694abb93aadb1fe/iframe?autoplay=true&amp;loop=true&amp;muted=true&amp;controls=false" loading="lazy" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="授業の動画"></iframe>
-        </div>
-        <figure class="cls__item"><img src="images/classroom-01.jpg" alt="プリントで学習する男の子" loading="lazy"></figure>
-        <figure class="cls__item"><img src="images/classroom-02.jpg" alt="タブレットで学ぶ笑顔の女の子" loading="lazy"></figure>
-        <figure class="cls__item"><img src="images/classroom-03.jpg" alt="鉛筆で書く男の子" loading="lazy"></figure>
-      </div>
-    </div>
-  </section>
-
   <!-- FOUNDERS -->
   <section class="sec sec--alt" id="founders">
     <div class="wrap">
       <div class="head rv">
         <div class="head__meta">
-          <span class="num">04</span>
+          <span class="num">03</span>
           <span class="lbl">Leadership</span>
         </div>
       </div>
@@ -609,7 +602,7 @@
     <div class="wrap">
       <div class="head rv">
         <div class="head__meta">
-          <span class="num">05</span>
+          <span class="num">04</span>
           <span class="lbl">Milestones</span>
         </div>
         <h2 class="head__title">これまでの歩み</h2>
@@ -674,7 +667,7 @@
     <div class="wrap">
       <div class="head rv">
         <div class="head__meta">
-          <span class="num">06</span>
+          <span class="num">05</span>
           <span class="lbl">Contact</span>
         </div>
         <h2 class="head__title">ご用件を選んで、そのまま送ってください。</h2>
