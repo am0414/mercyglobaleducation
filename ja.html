@@ -235,8 +235,8 @@
   .fnd:hover{background:#fff}
   .fnd__hd{display:flex;align-items:flex-start;gap:18px}
   .fnd__mono{
-    flex:0 0 auto;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
-    background:var(--navy-wash);font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy);letter-spacing:.02em;
+    flex:0 0 auto;width:76px;height:76px;border-radius:50%;display:block;
+    object-fit:cover;object-position:center;border:0.5px solid var(--line);background:var(--navy-wash);
   }
   .fnd__name{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--ink);line-height:1.45}
   .fnd__role{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-top:5px}
@@ -564,26 +564,27 @@
       <div class="fnds">
         <article class="fnd rv">
           <div class="fnd__hd">
-            <span class="fnd__mono" aria-hidden="true">YM</span>
+            <img class="fnd__mono" src="images/founder-yukie.png" alt="Yukie Minami" style="object-position:35% center" loading="lazy">
             <div>
               <h3 class="fnd__name">Yukie Minami</h3>
               <p class="fnd__role">創業者</p>
             </div>
           </div>
           <p class="fnd__bio">
-            予備校教室長を経て、2016年に小中学生向けの学習塾として会社を創業。
-            教育事業歴20年以上、経営と並行して今も自ら教壇に立っています。
+            40年以上にわたり、形を変えながら教え続けてきました。教室長を務めた予備校から、
+            2016年に創業した地域の学習塾、そして現在会社が運営するオンラインスクールまで。
+            今も自ら教壇に立っています。
           </p>
           <ul class="fnd__cred">
             <li>神戸大学 教育学部 卒業</li>
             <li>教員免許保有</li>
-            <li>教育事業歴20年以上</li>
+            <li>教育事業歴40年以上</li>
           </ul>
         </article>
 
         <article class="fnd rv">
           <div class="fnd__hd">
-            <span class="fnd__mono" aria-hidden="true">AM</span>
+            <img class="fnd__mono" src="images/founder-anju.jpg" alt="Anju Minami" loading="lazy">
             <div>
               <h3 class="fnd__name">Anju Minami</h3>
               <p class="fnd__role">CEO</p>
@@ -591,12 +592,13 @@
           </div>
           <p class="fnd__bio">
             2020年、Success Academy の立ち上げから参画。ニューヨーク在住10年で聞いてきた、
-            海外で子育てをする家庭の声をサービスの形にしてきました。現在は3つのサービス全体を統括しています。
+            海外で子育てをする家庭の声をサービスの形にしてきました。現在は3つのサービス全体を統括し、
+            その技術基盤も自ら開発しています。
           </p>
           <ul class="fnd__cred">
-            <li>コロンビア大学 American Language Program 修了</li>
             <li>ニューヨーク市立大学ハンター校 心理学専攻 卒業</li>
             <li>ペンシルベニア大学大学院にてコンピューターサイエンスを学ぶ</li>
+            <li>コロンビア大学 American Language Program 修了</li>
           </ul>
         </article>
       </div>

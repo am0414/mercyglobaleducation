@@ -236,8 +236,8 @@
   .fnd:hover{background:#fff}
   .fnd__hd{display:flex;align-items:flex-start;gap:18px}
   .fnd__mono{
-    flex:0 0 auto;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
-    background:var(--navy-wash);font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy);letter-spacing:.02em;
+    flex:0 0 auto;width:76px;height:76px;border-radius:50%;display:block;
+    object-fit:cover;object-position:center;border:0.5px solid var(--line);background:var(--navy-wash);
   }
   .fnd__name{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--ink);line-height:1.45}
   .fnd__role{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-top:5px}
@@ -572,27 +572,27 @@
       <div class="fnds">
         <article class="fnd rv">
           <div class="fnd__hd">
-            <span class="fnd__mono" aria-hidden="true">YM</span>
+            <img class="fnd__mono" src="images/founder-yukie.png" alt="Yukie Minami" style="object-position:35% center" loading="lazy">
             <div>
               <h3 class="fnd__name">Yukie Minami</h3>
               <p class="fnd__role">Founder</p>
             </div>
           </div>
           <p class="fnd__bio">
-            She founded the company in 2016 as a neighborhood tutoring school for elementary and middle
-            school students, after directing a cram school branch. Over twenty years in education, she has
-            kept teaching herself alongside running the business.
+            She has taught for more than forty years, changing the shape of the work as she went — from a
+            cram school branch she directed, to the neighborhood tutoring school she founded in 2016, to the
+            online schools the company runs today. She still teaches.
           </p>
           <ul class="fnd__cred">
             <li>B.A. in Education, Kobe University</li>
             <li>Licensed teacher</li>
-            <li>20+ years in education</li>
+            <li>40+ years in education</li>
           </ul>
         </article>
 
         <article class="fnd rv">
           <div class="fnd__hd">
-            <span class="fnd__mono" aria-hidden="true">AM</span>
+            <img class="fnd__mono" src="images/founder-anju.jpg" alt="Anju Minami" loading="lazy">
             <div>
               <h3 class="fnd__name">Anju Minami</h3>
               <p class="fnd__role">CEO</p>
@@ -601,12 +601,12 @@
           <p class="fnd__bio">
             She joined to launch Success Academy in 2020, drawing on ten years in New York and
             conversations with families raising children overseas. She now leads the company across all
-            three services.
+            three services, and builds the technology behind them.
           </p>
           <ul class="fnd__cred">
-            <li>American Language Program, Columbia University</li>
             <li>B.A. in Psychology, Hunter College, CUNY</li>
             <li>Graduate study in Computer Science, University of Pennsylvania</li>
+            <li>American Language Program, Columbia University</li>
           </ul>
         </article>
       </div>
